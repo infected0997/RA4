@@ -1,0 +1,62 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Relatório de Desempenho de Algoritmos de Ordenação}
+\author{Alejandro e Eduardo}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+Este relatório analisa o desempenho de diferentes algoritmos de ordenação: Insertion Sort, Quick Sort, Shell Sort e Counting Sort. O desempenho é avaliado em termos de tempo de execução (em nanosegundos) e número de trocas realizadas para diferentes tamanhos de entrada.
+
+\section{Resultados}
+
+\subsection{Desempenho dos Algoritmos}
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{@{}cccccc@{}}
+        \toprule
+        Tamanho & Algoritmo        & Tempo (ns)      & Trocas        \\ \midrule
+        1000    & Insertion Sort   & 2,389,800      & 243,584       \\
+                & Quick Sort       & 418,800        & 0             \\
+                & Shell Sort       & 353,200        & 7,261         \\
+                & Counting Sort    & 4,527,000      & 0             \\ \midrule
+        10,000  & Insertion Sort   & 6,499,200      & 24,800,299    \\
+                & Quick Sort       & 519,200        & 0             \\
+                & Shell Sort       & 1,973,700      & 143,021       \\
+                & Counting Sort    & 2,160,200      & 0             \\ \midrule
+        100,000 & Insertion Sort   & 685,541,500    & 2,496,191,152 \\
+                & Quick Sort       & 6,453,500      & 0             \\
+                & Shell Sort       & 10,919,500     & 2,795,133     \\
+                & Counting Sort    & 2,928,500      & 0             \\ \midrule
+        500,000 & Insertion Sort   & 17,857,821,800 & 62,556,855,694\\
+                & Quick Sort       & 35,919,600     & 0             \\
+                & Shell Sort       & 68,413,500     & 20,711,885    \\
+                & Counting Sort    & 6,503,300      & 0             \\ \midrule
+        1,000,000& Insertion Sort  & 73,053,899,800 & 250,193,923,181\\
+                & Quick Sort       & 75,831,200     & 0             \\
+                & Shell Sort       & 154,214,200    & 50,648,787    \\
+                & Counting Sort    & 8,995,500      & 0             \\ \bottomrule
+    \end{tabular}
+    \caption{Desempenho dos algoritmos de ordenação para diferentes tamanhos de entrada.}
+    \label{tab:performance}
+\end{table}
+
+\subsection{Análise do Desempenho}
+\begin{itemize}
+    \item \textbf{Quick Sort}: Este algoritmo se destacou como o mais eficiente em todos os tamanhos de entrada, com tempos de execução baixos e sem trocas realizadas.
+    \item \textbf{Insertion Sort}: Apresentou desempenho inferior, com tempos de execução crescentes drasticamente e um alto número de trocas, tornando-o inadequado para entradas maiores.
+    \item \textbf{Shell Sort}: Ofereceu um desempenho intermediário, com tempos de execução razoáveis, mas ainda acima do Quick Sort.
+    \item \textbf{Counting Sort}: Demonstrou alta eficiência em tempo, especialmente em conjuntos de dados maiores, e não realizou trocas, embora seja limitado a tipos de dados específicos.
+\end{itemize}
+
+\section{Conclusão}
+Este estudo revelou diferenças significativas no desempenho dos algoritmos de ordenação analisados. O \textbf{Quick Sort} se destacou como a opção mais eficiente para entradas de grande dimensão, com tempos de execução muito inferiores e nenhuma troca, o que o torna ideal para aplicações práticas que exigem alta performance.
+
+\end{document}
