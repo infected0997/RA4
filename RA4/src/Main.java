@@ -49,7 +49,7 @@ public class Main {
         long endTime = System.nanoTime();
         long duration = endTime - startTime;
 
-        System.out.printf("%s - Time: %d ns, Swaps: %d%n", name, duration, swaps);
+        System.out.printf("%s - Tempo: %d ns, Trocas: %d%n", name, duration, swaps);
     }
 
     static void evaluateSort(int[] array, CountingSort algorithm, String name) {
@@ -58,6 +58,6 @@ public class Main {
         long endTime = System.nanoTime();
         long duration = endTime - startTime;
 
-        System.out.printf("%s - Time: %d ns, Swaps: 0%n", name, duration);
+        System.out.printf("%s - Tempo: %d ns, Trocas: 0%n", name, duration);
     }
 }
